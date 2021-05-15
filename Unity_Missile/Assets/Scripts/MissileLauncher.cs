@@ -21,7 +21,7 @@ public class MissileLauncher : MonoBehaviour
         missile.Launch(transform.position, transform.TransformDirection(direction), target);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         transform.LookAt(target);
     }
@@ -32,6 +32,6 @@ public class MissileLauncher : MonoBehaviour
         {
             Launch();
             yield return new WaitForSeconds(launchInterval);
-        }     
+        }
     }
 }
